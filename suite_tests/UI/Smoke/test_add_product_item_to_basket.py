@@ -8,6 +8,7 @@ from suite_tests.pom.cookie_modal_pom import *
 class TestAddProductItems:
 
     def test_add_product_to_basket(self):
+        expected_result = "Produit ajouté au panier"
         cookie = CookieModal_POM(self.driver)
         cookie.setup_cookie_modal_true()
 
@@ -21,4 +22,7 @@ class TestAddProductItems:
         catalog = Catalog_POM(self.driver)
         catalog.go_to_first_catalog_element()
         catalog.go_to_first_catalog_element()
-        catalog.add_first_product_item_to_basket()
+
+
+        #add notification pom + test displaying assert ()
+        #go to basket and check: choice product item is displayed and make api relalculation
